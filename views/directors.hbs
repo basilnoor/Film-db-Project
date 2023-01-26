@@ -1,0 +1,89 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<br>
+<br>
+<h2>List of Directors</h2>
+<br>
+<br>
+<form id="search_Lname" method='GET' action='/directors'>
+    <label for="search_Lname">Search by Last Name:</label>
+    <input type="text" name="Lname" id="search_Lname">
+    <input type="submit" value="Search" />
+    <a href='/movies'><button>Reset</button></a>
+</form>
+<br>
+<br>
+<br>
+<div>
+    <table class="dataTable">
+        <thead>
+            <th>id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Delete</th>
+        </thead>
+        {{#each data}}
+        <tr>
+            <td>{{this.director_id}}</td>
+            <td>{{this.director_fname}}</td>
+            <td>{{this.director_lname}}</td>
+            <td><button onclick="deleteDirector({{this.director_id}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </table>
+    <script src="./js/delete_directors.js"></script>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <form id="add-director-form" method="POST" action="/add-director-form">
+        <fieldset class="form">
+            <legend><strong>Add Director</strong></legend>
+            <p>To add a new director, please enter the information below and click 'Add'</p>
+            <label for="input_director_fname">First Name: </label>
+            <input type="text" name="input_director_fname" id="input_director_fname" placeholder="Christopher" required>
+            <br>
+            <br>
+            <label for="input_director_lname">Last Name: </label>
+            <input type="text" id="input_director_lname" name="input_director_lname" placeholder="Nolan" required>
+            <br>
+            <br>
+            <input type="submit" value="Add">
+        </fieldset>
+    </form>
+</div>
+<br>
+<h2>------------------------------------------------------------</h2>
+<div>
+    <form id="update-director-form-ajax">
+        <fieldset class="form">
+            <legend><strong>Updating a Director</strong></legend>
+            <p>To update a director complete the form below</p>
+            <label for="input_id">Director id: </label>
+            <select name="input_id" id="update_select">
+                <option value="0">Select a Director</option>
+                {{#each data}}
+                <option value="{{this.director_id}}">({{this.director_id}}) {{this.director_fname}}
+                    {{this.director_lname}}
+                </option>
+                {{/each}}
+            </select>
+            <br>
+            <br>
+            <label for="input_director_fname">First Name: </label>
+            <input type="text" name="input_director_fname" id="input_director_fname_update" placeholder="Update"
+                required="required">
+            <br>
+            <br>
+            <label for="input_director_lname">Last Name: </label>
+            <input type="text" name="input_director_lname" id="input_director_lname_update" placeholder="Update"
+                required="required">
+            <br>
+            <br>
+            <input type="submit" value="Update">
+        </fieldset>
+    </form>
+    <script src="./js/update_directors.js"></script>
+</div>

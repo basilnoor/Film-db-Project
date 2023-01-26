@@ -1,0 +1,89 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<br>
+<br>
+<h2>List of Movie Directors</h2>
+<br>
+<div class="reviewSearch">
+    <form class="reviewForm" id="search_movie" method='GET' action='/movie-directors'>
+        <label for="search_movie">Search by Movie</label>
+        <br>
+        <select name="movie" id="input_search_movie">
+            <option value="0">Select One</option>
+            {{#each movie}}
+            <option value="{{this.movie_id}}">({{this.movie_id}}) {{this.name}}</option>
+            {{/each}}
+        </select>
+        <br>
+        <input type="submit" value="Search" />
+    </form>
+    <br>
+    <form class="reviewForm" id="search_director" method='GET' action='/movie-directors'>
+        <label for="search_director">Search by Director</label>
+        <br>
+        <select name="director" id="input_search_director">
+            <option value="0">Select One</option>
+            {{#each director}}
+            <option value="{{this.director_id}}">({{this.director_id}}) {{this.director_fname}} {{this.director_lname}}
+            </option>
+            {{/each}}
+        </select>
+        <br>
+        <input type="submit" value="Search" />
+    </form>
+</div>
+<a href='/movie-directors'><button class="reviewButton">Reset</button></a>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <table class="dataTable">
+        <thead>
+            <th>id</th>
+            <th>Movie</th>
+            <th>Director</th>
+            <th>Delete</th>
+        </thead>
+        {{#each data}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.fullName}}</td>
+            <td><button onclick="deleteMovieDirector({{this.id}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </table>
+    <script src="./js/delete_movie_directors.js"></script>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <form id="add-movie-director-form" method="POST" action="/add-movie-director-form">
+        <fieldset class="form">
+            <legend><strong>Add a Movie Director Relationship</strong></legend>
+            <p>To link a director to a movie, please enter the information below and click 'Add'</p>
+            <label for="input_movie_id">Movie: </label>
+            <select name="input_movie_id" id="input_movie_id" required>
+                <option value="0">Select One</option>
+                {{#each movie}}
+                <option value="{{this.movie_id}}">{{this.name}}</option>
+                {{/each}}
+            </select>
+            <br>
+            <br>
+            <label for="input_director_id">Director: </label>
+            <select name="input_director_id" id="input_director_id" required>
+                <option value="0">Select One</option>
+                {{#each director}}
+                <option value="{{this.director_id}}">{{this.director_fname}} {{this.director_lname}}</option>
+                {{/each}}
+            </select>
+            <br>
+            <br>
+            <input type="submit" value="Add">
+        </fieldset>
+    </form>
+</div>

@@ -1,0 +1,93 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<br>
+<br>
+<h2>List of Reviewers</h2>
+<br>
+<br>
+<br>
+<div>
+    <table class="dataTable">
+        <thead>
+            <th>id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Delete</th>
+        </thead>
+        {{#each data}}
+        <tr>
+            <td>{{this.reviewer_id}}</td>
+            <td>{{this.reviewer_fname}}</td>
+            <td>{{this.reviewer_lname}}</td>
+            <td>{{this.reviewer_email}}</td>
+            <td><button class="deleteButton" onclick="deleteReviewer({{this.reviewer_id}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </table>
+    <script src="./js/delete_reviewers.js"></script>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <form id="add-reviewer-form" method="POST" action="/add-reviewer-form">
+        <fieldset class="form">
+            <legend><strong>Add Reviewer</strong></legend>
+            <p>To add a new reviewer, please enter the information below and click 'Add'</p>
+            <label for="input_reviewer_fname">First Name: </label>
+            <input type="text" name="input_reviewer_fname" id="input_reviewer_fname" placeholder="John" required>
+            <br>
+            <br>
+            <label for="input_reviewer_lname">Last Name: </label>
+            <input type="text" id="input_reviewer_lname" name="input_reviewer_lname" placeholder="Doe" required>
+            <br>
+            <br>
+            <label for="input_reviewer_email">Email: </label>
+            <input type="email" id="input_reviewer_email" name="input_reviewer_email" placeholder="Jdoe@gmail.com"
+                required>
+            <br>
+            <br>
+            <input type="submit" value="Add">
+        </fieldset>
+    </form>
+</div>
+<br>
+<h2>------------------------------------------------------------</h2>
+<div>
+    <form id="update-reviewer-form-ajax">
+        <fieldset class="form">
+            <legend><strong>Updating a Reviewer</strong></legend>
+            <p>To update a reviewer complete the form below</p>
+            <label for="input_id">Reviewer id: </label>
+            <select name="input_id" id="update_select">
+                <option value="0">Select a Reviewer</option>
+                {{#each data}}
+                <option value="{{this.reviewer_id}}">({{this.reviewer_id}}) {{this.reviewer_fname}}
+                    {{this.reviewer_lname}}
+                </option>
+                {{/each}}
+            </select>
+            <br>
+            <br>
+            <label for="input_reviewer_fname">First Name: </label>
+            <input type="text" name="input_reviewer_fname" id="input_reviewer_fname_update" placeholder="Update"
+                required="required">
+            <br>
+            <br>
+            <label for="input_reviewer_lname">Last Name: </label>
+            <input type="text" name="input_reviewer_lname" id="input_reviewer_lname_update" placeholder="Update"
+                required="required">
+            <br>
+            <br>
+            <label for="input_reviewer_email">Email: </label>
+            <input type="email" name="input_reviewer_email" id="input_reviewer_email_update" placeholder="Update"
+                required="required">
+            <br>
+            <br>
+            <input type="submit" value="Update">
+        </fieldset>
+    </form>
+    <script src="./js/update_reviewers.js"></script>
+</div>

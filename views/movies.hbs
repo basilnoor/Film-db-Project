@@ -1,0 +1,122 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+<br>
+<br>
+<h2>List of all Movies</h2>
+<br>
+<br>
+<form id="search_genre" method='GET' action='/movies'>
+    <label for="search_genre">Search by Genre:</label>
+    <select name="genre" id="input_search_genre">
+        <option value="0">Select One</option>
+        {{#each genres}}
+        <option value="{{this.genre_id}}">({{this.genre_id}}) {{this.genre}}</option>
+        {{/each}}
+    </select>
+    <input type="submit" value="Search" />
+    <a href='/movies'><button>Reset</button></a>
+</form>
+<br>
+<br>
+<br>
+<div>
+    <table class="dataTable">
+        <thead>
+            <th>id</th>
+            <th>Name</th>
+            <th>Genre</th>
+            <th>Box Office</th>
+            <th>Date released</th>
+            <th>Delete</th>
+        </thead>
+        {{#each data}}
+        <tr>
+            <td>{{this.movie_id}}</td>
+            <td>{{this.name}}</td>
+            <td>{{this.genre}}</td>
+            <td>{{this.box_office}}</td>
+            <td>{{this.date_released}}</td>
+            <td><button onclick="deleteMovie({{this.movie_id}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </table>
+    <script src="./js/delete_movies.js"></script>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <form id="add-movie-form" method="POST" action="/add-movie-form">
+        <fieldset class="form">
+            <legend><strong>Add Movies</strong></legend>
+            <p>To add a new movie, please enter the information below and click 'Add'</p>
+            <label for="input_name">Movie Name: </label>
+            <input type="text" name="input_name" id="input_name" placeholder="The Dark Knight" required>
+            <br>
+            <br>
+            <label for="input_date_released">Date Released: </label>
+            <input type="date" id="input_date_released" name="input_date_released" required>
+            <br>
+            <br>
+            <label for="input_genre_id">Genre: </label>
+            <select name="input_genre_id" id="input_genre_id" required>
+                <option value="0">NULL</option>
+                {{#each genres}}
+                <option value="{{this.genre_id}}">({{this.genre_id}}) {{this.genre}}</option>
+                {{/each}}
+            </select>
+            <br>
+            <br>
+            <label for="input_box_office">Box Office ($): </label>
+            <input type="text" id="input_box_office" name="input_box_office" placeholder="100000">
+            <br>
+            <br>
+            <input type="submit" value="Add">
+        </fieldset>
+    </form>
+</div>
+<br>
+<h2>------------------------------------------------------------</h2>
+<div>
+    <form id="update-movie-form-ajax">
+        <fieldset class="form">
+            <legend><strong>Updating a Movie</strong></legend>
+            <p>To update a movie complete the form below</p>
+            <label for="input_id">Movie id: </label>
+            <select name="input_id" id="update_select">
+                <option value="0">Select a Movie</option>
+                {{#each data}}
+                <option value="{{this.movie_id}}">({{this.movie_id}}) {{this.name}}</option>
+                {{/each}}
+            </select>
+            <br>
+            <br>
+            <label for="input_name">Movie Name: </label>
+            <input type="text" name="input_name" id="input_name_update" placeholder="Update" required="required">
+            <br>
+            <br>
+            <label for="input_date_released">Date Released: </label>
+            <input type="date" name="input_date_released" id="input_date_released_update" required="required">
+            <br>
+            <br>
+            <label for="input_genre_id_update">Genre: </label>
+            <select name="input_genre_id_update" id="input_genre_id_update" required>
+                <option value="0">NULL</option>
+                {{#each genres}}
+                <option value="{{this.genre_id}}">({{this.genre_id}}) {{this.genre}}</option>
+                {{/each}}
+            </select>
+            <br>
+            <br>
+            <label for="input_box_office">Box Office ($): </label>
+            <input type="text" name="input_box_office" id="input_box_office_update" placeholder="Update">
+            <br>
+            <br>
+            <input type="submit" value="Update">
+        </fieldset>
+    </form>
+    <script src="./js/update_movies.js"></script>
+</div>
+<br>
+<br>
+<br>

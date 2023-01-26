@@ -1,0 +1,42 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+<br>
+<br>
+<h2>List of Genres</h2>
+<br>
+<br>
+<br>
+<div>
+    <table class="dataTable">
+        <thead>
+            <th>id</th>
+            <th>Genre</th>
+            <th>Delete</th>
+        </thead>
+        {{#each data}}
+        <tr>
+            <td>{{this.genre_id}}</td>
+            <td>{{this.genre}}</td>
+            <td><button onclick="deleteGenre({{this.genre_id}})">Delete</button></td>
+        </tr>
+        {{/each}}
+    </table>
+    <script src="./js/delete_genres.js"></script>
+</div>
+<br>
+<br>
+<br>
+<div>
+    <form id="add-genre-form" method="POST" action="/add-genre-form">
+        <fieldset class="form">
+            <legend><strong>Add Genres</strong></legend>
+            <p>To add a genre, enter the information below</p>
+            <label for="input_genre">Genre: </label>
+            <input type="text" id="input_genre" name="input_genre" placeholder="Action">
+            <br>
+            <br>
+            <input type="submit" value="Add">
+        </fieldset>
+    </form>
+</div>
