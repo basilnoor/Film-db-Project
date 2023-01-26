@@ -21,7 +21,6 @@
 > Genres:Movies (M:1)
 > <br>
 > Functionality - Create/Read/Delete
-
 <img src= "https://user-images.githubusercontent.com/51865580/214773743-04930e89-cfed-4b0c-94a2-d1c8d8f3c79f.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773743-04930e89-cfed-4b0c-94a2-d1c8d8f3c79f.png" />
 
 <h3> Movies Page </h3>
