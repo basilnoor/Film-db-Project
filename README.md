@@ -9,6 +9,7 @@
 <br>
 <p>
   I haven't hosted the project so instead I'll cover the relationships as well any query options per page below.
+<br>
   <b>ERD</b> and <b>Schema</b> below!
 </p>
 
