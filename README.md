@@ -49,6 +49,7 @@
 >Acts as intersection table for Movies:Reviewers (M:M)
 ><br>
 >Movie_reviews:Reviewers (M:1), Movie_Reviews:Movies (M:1)
+><br>
 >Functionality - Create/Read/Update/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773772-6f50bf00-2663-4786-ae5c-d4e7395540c7.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773772-6f50bf00-2663-4786-ae5c-d4e7395540c7.png" />
 
