@@ -8,7 +8,7 @@
 </p>
 <br>
 <p>
-  For a <b>video walkthrough</b> please refer to the youtube link below. Here I just go over the concepts of the project briefly.
+  For a <b>video walkthrough</b> please refer to the youtube link below.
 </p>
 
 <h3> Entity Relationship Diagram (ERD) </h3>
