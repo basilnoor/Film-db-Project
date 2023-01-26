@@ -8,9 +8,9 @@
 </p>
 <br>
 <p>
-  Sadly I haven't hosted the project so instead I'll cover the relationships as well any query options per page below.
+  I haven't hosted the project so instead I'll cover the relationships as well any query options per page below.
+  <b>ERD</b> and <b>Schema</b> below!
 </p>
-<br>
 
 <h3> Homepage </h3>
 <img src= "https://user-images.githubusercontent.com/51865580/214773731-ca42d593-5abe-46b8-a074-41f0020743df.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773731-ca42d593-5abe-46b8-a074-41f0020743df.png" />
