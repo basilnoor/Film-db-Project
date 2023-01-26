@@ -8,13 +8,11 @@
 </p>
 <br>
 <p>
-  For a video walkthrough please refer to the youtube link below. Here I just go over the concepts of the project briefly.
+  For a **video walkthrough** please refer to the youtube link below. Here I just go over the concepts of the project briefly.
 </p>
 
 <h3> Entity Relationship Diagram (ERD) </h3>
-<br>
 <img src= "https://user-images.githubusercontent.com/51865580/214769524-89dce198-ffdd-4690-9eef-e2c929e85fd9.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214769524-89dce198-ffdd-4690-9eef-e2c929e85fd9.png" />
 
 <h3> Normalized Schema </h3>
-<br>
 <img src= "https://user-images.githubusercontent.com/51865580/214769539-6d4304dd-abbc-4001-83c1-93128fd63696.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214769539-6d4304dd-abbc-4001-83c1-93128fd63696.png" />
