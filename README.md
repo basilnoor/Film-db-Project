@@ -24,24 +24,38 @@
 <img src= "https://user-images.githubusercontent.com/51865580/214773743-04930e89-cfed-4b0c-94a2-d1c8d8f3c79f.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773743-04930e89-cfed-4b0c-94a2-d1c8d8f3c79f.png" />
 
 <h3> Movies Page </h3>
+
 > Movies:Genres (1:M), Movies:Reviewers (M:M) w/ intersection table movie_reviews, Movies:Directors (M:M) w/ intersection table movie_directors
+> <br>
 > Functionality - Create/Read/Update/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773747-a6f8107a-3854-4270-94d4-275b5519b233.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773747-a6f8107a-3854-4270-94d4-275b5519b233.png" />
+
 <h3> Directors Page </h3>
+
 >Directors:Movies (M:M)
+><br>
 >Functionality - Create/Read/Update/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773758-f5bc8ebc-3a38-46c8-b905-961c1e0bb0f7.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773758-f5bc8ebc-3a38-46c8-b905-961c1e0bb0f7.png" />
+
 <h3> Reviewers Page </h3>
+
 >Reviewers:Movies (M:M)
+><br>
 >Functionality - Create/Read/Update/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773761-fe7e8f9c-93f9-4cde-a279-1722a9c9bb93.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773761-fe7e8f9c-93f9-4cde-a279-1722a9c9bb93.png" />
+
 <h3> Movie Review Page </h3>
+
 >Acts as intersection table for Movies:Reviewers (M:M)
+><br>
 >Movie_reviews:Reviewers (M:1), Movie_Reviews:Movies (M:1)
 >Functionality - Create/Read/Update/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773772-6f50bf00-2663-4786-ae5c-d4e7395540c7.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773772-6f50bf00-2663-4786-ae5c-d4e7395540c7.png" />
+
 <h3> Movie Director Page </h3>
+
 > Acts as intersection table for Directors:Movies (M:M)
+> <br>
 > Functionality - Create/Read/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773780-032f62b9-d175-4c8a-ac1d-bf89a84be2d2.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773780-032f62b9-d175-4c8a-ac1d-bf89a84be2d2.png" />
 
