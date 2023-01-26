@@ -15,10 +15,12 @@
 
 <h3> Homepage </h3>
 <img src= "https://user-images.githubusercontent.com/51865580/214773731-ca42d593-5abe-46b8-a074-41f0020743df.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773731-ca42d593-5abe-46b8-a074-41f0020743df.png" />
+
 <h3> Genres Page </h3>
 > Genres:Movies (M:1)
 > Functionality - Create/Read/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773743-04930e89-cfed-4b0c-94a2-d1c8d8f3c79f.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773743-04930e89-cfed-4b0c-94a2-d1c8d8f3c79f.png" />
+
 <h3> Movies Page </h3>
 > Movies:Genres (1:M), Movies:Reviewers (M:M) w/ intersection table movie_reviews, Movies:Directors (M:M) w/ intersection table movie_directors
 > Functionality - Create/Read/Update/Delete
@@ -28,8 +30,8 @@
 >Functionality - Create/Read/Update/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773758-f5bc8ebc-3a38-46c8-b905-961c1e0bb0f7.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773758-f5bc8ebc-3a38-46c8-b905-961c1e0bb0f7.png" />
 <h3> Reviewers Page </h3>
-> Reviewers:Movies (M:M)
-> Functionality - Create/Read/Update/Delete
+>Reviewers:Movies (M:M)
+>Functionality - Create/Read/Update/Delete
 <img src= "https://user-images.githubusercontent.com/51865580/214773761-fe7e8f9c-93f9-4cde-a279-1722a9c9bb93.png" data-canonical-src= "https://user-images.githubusercontent.com/51865580/214773761-fe7e8f9c-93f9-4cde-a279-1722a9c9bb93.png" />
 <h3> Movie Review Page </h3>
 >Acts as intersection table for Movies:Reviewers (M:M)
