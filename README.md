@@ -8,7 +8,7 @@
 </p>
 <br>
 <p>
-  For a <b>video walkthrough</b> please refer to the youtube link below.
+  Sadly I haven't hosted the project so instead I'll cover the relationships as well any query options per page below.
 </p>
 
 <h3> Entity Relationship Diagram (ERD) </h3>
